@@ -74,8 +74,8 @@ public class EcuacionesTest {
         solucion = ecuacionSegundoGrado.resuelve();
         solucionDeseada = new Solucion();
         solucionDeseada.setNumeroSoluciones(2);
-        solucionDeseada.setPrimeraSolucion(new Complejo(-2.0/3.0, 2.0*Math.sqrt(14.0)));
-        solucionDeseada.setSegundaSolucion(new Complejo(-2.0/3.0, -2.0*Math.sqrt(14.0)));
+        solucionDeseada.setPrimeraSolucion(new Complejo(-2.0/3.0, Math.sqrt(56.0)/3.0));
+        solucionDeseada.setSegundaSolucion(new Complejo(-2.0/3.0, -Math.sqrt(56.0)/3.0));
         assertEquals(solucionDeseada,solucion);
     }
 }
