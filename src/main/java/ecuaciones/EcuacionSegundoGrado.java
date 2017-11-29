@@ -81,11 +81,11 @@ public class EcuacionSegundoGrado {
     }
 
     private double parteVariableImaginaria() {
-        return Math.sqrt((4.0 * coeficienteA * coeficienteC) - (coeficienteB * coeficienteB)) / (2.0 * coeficienteA);
+        return Math.sqrt(-loDeDentroDeLaRaiz()) / (2.0 * coeficienteA);
     }
 
     private double parteVariableReal() {
-        return Math.sqrt((coeficienteB * coeficienteB) - (4.0 * coeficienteA * coeficienteC)) / (2.0 * coeficienteA);
+        return Math.sqrt(loDeDentroDeLaRaiz()) / (2.0 * coeficienteA);
     }
 
     private double parteFijaReal() {
