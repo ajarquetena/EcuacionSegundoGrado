@@ -78,4 +78,14 @@ public class EcuacionesTest {
         solucionDeseada.setSegundaSolucion(new Complejo(-2.0/3.0, -Math.sqrt(56.0)/3.0));
         assertEquals(solucionDeseada,solucion);
     }
+
+    @Test
+    public void ecuacionSegundoGradoConAyBDistintoDe0UnaSolaSolucion() {
+        EcuacionSegundoGrado ecuacionSegundoGrado=new EcuacionSegundoGrado(3,6,3);
+        Solucion solucion = ecuacionSegundoGrado.resuelve();
+        Solucion solucionDeseada = new Solucion();
+        solucionDeseada.setNumeroSoluciones(1);
+        solucionDeseada.setPrimeraSolucion(new Complejo(-1.0, 0.0));
+        assertEquals(solucionDeseada,solucion);
+    }
 }
